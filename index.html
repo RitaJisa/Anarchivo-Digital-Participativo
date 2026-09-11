@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anarchivo Digital Participativo - Beca Leonardo BBVA 2026</title>
+  <style>
+    body { 
+      font-family: system-ui, -apple-system, sans-serif; 
+      max-width: 1000px; 
+      margin: 0 auto; 
+      padding: 40px 20px; 
+      color: #1e293b; 
+      background-color: #f8fafc; 
+      line-height: 1.6; 
+    }
+    h1 { 
+      color: #0284c7; 
+      font-size: 2.2rem; 
+      margin-bottom: 5px; 
+      text-align: center; 
+    }
+    .autor { 
+      text-align: center; 
+      font-weight: 600; 
+      color: #475569; 
+      margin-bottom: 30px; 
+    }
+    .sintesis { 
+      background: #ffffff; 
+      padding: 25px 30px; 
+      border-radius: 8px; 
+      border-left: 5px solid #0284c7; 
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+      margin-bottom: 40px; 
+    }
+    .sintesis p { 
+      margin-bottom: 15px; 
+      text-align: justify; 
+    }
+    .seccion-visor { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      gap: 30px; 
+      background: #ffffff; 
+      padding: 25px; 
+      border-radius: 10px; 
+      margin-bottom: 35px; 
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
+      border: 1px solid #e2e8f0; 
+    }
+    .seccion-texto { 
+      flex: 1; 
+    }
+    .seccion-texto h2 { 
+      color: #0f172a; 
+      font-size: 1.3rem; 
+      border-bottom: 2px solid #e2e8f0; 
+      padding-bottom: 8px; 
+      margin-top: 0; 
+    }
+    .seccion-texto p { 
+      color: #334155; 
+      text-align: justify; 
+      font-size: 0.95rem; 
+    }
+    .seccion-imagen { 
+      flex: 1; 
+      max-width: 45%; 
+      text-align: center; 
+    }
+    .seccion-imagen img { 
+      max-width: 100%; 
+      height: auto; 
+      border-radius: 8px; 
+      border: 1px solid #cbd5e1; 
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    }
+    @media (max-width: 768px) {
+      .seccion-visor { flex-direction: column; }
+      .seccion-imagen { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ANARCHIVO PILATENO</h1>
+  <div class="autor">Infraestructura Digital Participativa | Beca Leonardo BBVA 2026</div>
+
+  <div class="sintesis">
+    <p>El <strong>Anarchivo Digital Participativo</strong> es una infraestructura de código abierto (<em>Open Source</em>) basada en una aplicación móvil PWA de baja fricción y motores locales de Inteligencia Artificial (STT, HTR y Visión por Computadora).</p>
+    <p>Desarrollado como piloto para el ejido de Pilateno (Xilitla, S.L.P.), el proyecto combina el uso de IA de frontera operando en segundo plano dentro de servidores privados aislados (<em>No-Leakage</em>). Esta arquitectura garantiza la soberanía tecnológica comunitaria, el cumplimiento de protección de datos (LFPDPPP) y el ejercicio de derechos ARCO sin barreras de alfabetización.</p>
+  </div>
+
+  <!-- 1. App Móvil -->
+  <div class="seccion-visor">
+    <div class="seccion-texto">
+      <h2>1. App Móvil PWA (Captura de Baja Fricción)</h2>
+      <p>Esta interfaz materializa la metodología de captura descentralizada al sustituir los complejos formularios por activadores narrativos afectivos de un solo clic. Su diseño <em>offline-first</em> guía a los usuarios mediante tarjetas de voz bilingües (náhuatl y español) que incentivan el registro espontáneo de su memoria viva.</p>
+      <p>Integra avisos de privacidad sonoros y mecanismos de derechos ARCO directamente en la plataforma (In-App), garantizando un consentimiento informado sin barreras de alfabetización.</p>
+    </div>
+    <div class="seccion-imagen">
+      <img src="app.png" alt="App Móvil PWA Pilateno">
+    </div>
+  </div>
+
+  <!-- 2. Cartografía -->
+  <div class="seccion-visor">
+    <div class="seccion-texto">
+      <h2>2. Cartografía del Acervo (Geolocalización)</h2>
+      <p>Esta visualización ancla los testimonios, fotografías y documentos directamente en el territorio donde cobran sentido. Permite a la comunidad y a los evaluadores navegar espacialmente por los recursos multimedia procesados por visión computacional, vinculando la memoria con coordenadas geográficas específicas.</p>
+      <p>Al situar el acervo etnográfico sobre el paisaje histórico, la plataforma restituye la gobernanza comunitaria sobre el patrimonio material e inmaterial.</p>
+    </div>
+    <div class="seccion-imagen">
+      <img src="cartografia.png" alt="Cartografía del Acervo">
+    </div>
+  </div>
+
+  <!-- 3. Fotografías e IA -->
+  <div class="seccion-visor">
+    <div class="seccion-texto">
+      <h2>3. Nodos Relacionales e IA (Visor de Fotografía)</h2>
+      <p>Muestra el procesamiento multimodal en segundo plano donde motores de IA (Computer Vision, Whisper para STT y HTR) extraen transcripciones y etiquetas visuales automáticamente, eliminando la ingesta manual de metadatos.</p>
+      <p>Los datos biométricos sensibles de voz y rostro son procesados en servidores privados aislados bajo una política de <em>No-Leakage</em>, evitando que el patrimonio sea transferido a APIs comerciales externas.</p>
+    </div>
+    <div class="seccion-imagen">
+      <img src="fotografias.png" alt="Visor Inteligencia Artificial">
+    </div>
+  </div>
+
+  <!-- 4. Mapa DEM -->
+  <div class="seccion-visor">
+    <div class="seccion-texto">
+      <h2>4. Cartografía Participativa sobre Modelo DEM</h2>
+      <p>La proyección de capas hidrográficas, productivas y patrimoniales sobre Modelos Digitales de Elevación (DEM) traduce la geografía sagrada y las territorialidades en una herramienta visual de autogestión.</p>
+      <p>Integrar pilas de agua, cafetales y zonas ejidales permite leer históricamente las dinámicas socioambientales de Xilitla en un formato interactivo.</p>
+    </div>
+    <div class="seccion-imagen">
+      <img src="mapa.png" alt="Mapa Participativo DEM">
+    </div>
+  </div>
+
+  <!-- 5. Redes Semánticas -->
+  <div class="seccion-visor">
+    <div class="seccion-texto">
+      <h2>5. Redes Semánticas Emergentes (Grafo Dinámico)</h2>
+      <p>El grafo interactivo ilustra las conexiones orgánicas entre entidades patrimoniales fundamentales (Agua, Tierra, Café), los cronotopos generacionales (como los <em>güelos</em>) y las autoridades comunitarias.</p>
+      <p>Esta red flexible evidencia cómo la plataforma no impone categorías rígidas, sino que parte de nodos base que se reordenan según la ingesta de la población.</p>
+    </div>
+    <div class="seccion-imagen">
+      <img src="semanticas.png" alt="Grafo Dinámico de Redes Semánticas">
+    </div>
+  </div>
+
+</body>
+</html>
