@@ -7,7 +7,7 @@
   <style>
     body { 
       font-family: system-ui, -apple-system, sans-serif; 
-      max-width: 1000px; 
+      max-width: 1100px; 
       margin: 0 auto; 
       padding: 40px 20px; 
       color: #1e293b; 
@@ -28,7 +28,7 @@
     }
     .sintesis { 
       background: #ffffff; 
-      padding: 25px 30px; 
+      padding: 25px 35px; 
       border-radius: 8px; 
       border-left: 5px solid #0284c7; 
       box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
@@ -38,48 +38,68 @@
       margin-bottom: 15px; 
       text-align: justify; 
     }
-    .seccion-visor { 
-      display: flex; 
-      align-items: center; 
-      justify-content: space-between; 
-      gap: 30px; 
-      background: #ffffff; 
-      padding: 25px; 
-      border-radius: 10px; 
-      margin-bottom: 35px; 
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
-      border: 1px solid #e2e8f0; 
+
+    /* Estilo para la App Móvil (Lado a lado) */
+    .seccion-app {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
     }
-    .seccion-texto { 
-      flex: 1; 
+    .seccion-app .texto { flex: 1; }
+    .seccion-app .imagen { flex: 0 0 320px; text-align: center; }
+    .seccion-app .imagen img { max-width: 100%; height: auto; border-radius: 12px; border: 1px solid #cbd5e1; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+
+    /* Estilo para las Secciones 2 a 5 (Explicación Arriba + Imagen Grande Abajo) */
+    .seccion-panoramica {
+      display: flex;
+      flex-direction: column;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
     }
-    .seccion-texto h2 { 
-      color: #0f172a; 
-      font-size: 1.3rem; 
-      border-bottom: 2px solid #e2e8f0; 
-      padding-bottom: 8px; 
-      margin-top: 0; 
+    .seccion-panoramica .texto {
+      width: 100%;
+      margin-bottom: 20px;
     }
-    .seccion-texto p { 
-      color: #334155; 
-      text-align: justify; 
-      font-size: 0.95rem; 
+    .seccion-panoramica .texto h2 {
+      color: #0f172a;
+      font-size: 1.4rem;
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 8px;
+      margin-top: 0;
     }
-    .seccion-imagen { 
-      flex: 1; 
-      max-width: 45%; 
-      text-align: center; 
+    .seccion-panoramica .texto p {
+      color: #334155;
+      text-align: justify;
+      font-size: 0.98rem;
+      margin-bottom: 10px;
     }
-    .seccion-imagen img { 
-      max-width: 100%; 
-      height: auto; 
-      border-radius: 8px; 
-      border: 1px solid #cbd5e1; 
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    .seccion-panoramica .imagen {
+      width: 100%;
+      text-align: center;
     }
+    .seccion-panoramica .imagen img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
     @media (max-width: 768px) {
-      .seccion-visor { flex-direction: column; }
-      .seccion-imagen { max-width: 100%; }
+      .seccion-app { flex-direction: column; }
+      .seccion-app .imagen { max-width: 100%; }
     }
   </style>
 </head>
@@ -93,62 +113,62 @@
     <p>Desarrollado como piloto para el ejido de Pilateno (Xilitla, S.L.P.), el proyecto combina el uso de IA de frontera operando en segundo plano dentro de servidores privados aislados (<em>No-Leakage</em>). Esta arquitectura garantiza la soberanía tecnológica comunitaria, el cumplimiento de protección de datos (LFPDPPP) y el ejercicio de derechos ARCO sin barreras de alfabetización.</p>
   </div>
 
-  <!-- 1. App Móvil -->
-  <div class="seccion-visor">
-    <div class="seccion-texto">
+  <!-- 1. App Móvil PWA (Side-by-side) -->
+  <div class="seccion-app">
+    <div class="texto">
       <h2>1. App Móvil PWA (Captura de Baja Fricción)</h2>
-      <p>Esta interfaz materializa la metodología de captura descentralizada al sustituir los complejos formularios por activadores narrativos afectivos de un solo clic. Su diseño <em>offline-first</em> guía a los usuarios mediante tarjetas de voz bilingües (náhuatl y español) que incentivan el registro espontáneo de su memoria viva.</p>
-      <p>Integra avisos de privacidad sonoros y mecanismos de derechos ARCO directamente en la plataforma (In-App), garantizando un consentimiento informado sin barreras de alfabetización.</p>
+      <p>Esta interfaz materializa la metodología de captura descentralizada al sustituir los complejos formularios de metadatos por activadores narrativos afectivos de un solo clic. Su diseño <em>offline-first</em> está optimizado para la brecha digital rural, guiando a los usuarios mediante tarjetas de voz bilingües (náhuatl y español) que incentivan el registro espontáneo de su memoria viva.</p>
+      <p>Desde una perspectiva ética, la aplicación resuelve la fricción jurídica al integrar avisos de privacidad sonoros y mecanismos de derechos ARCO (Acceso, Rectificación, Cancelación u Oposición) directamente en la plataforma (In-App). Esto garantiza un consentimiento libre e informado sin imponer barreras de alfabetización, devolviendo el control de los datos sensibles a los propios habitantes.</p>
     </div>
-    <div class="seccion-imagen">
+    <div class="imagen">
       <img src="app.png" alt="App Móvil PWA Pilateno">
     </div>
   </div>
 
-  <!-- 2. Cartografía -->
-  <div class="seccion-visor">
-    <div class="seccion-texto">
+  <!-- 2. Cartografía del Acervo (Texto arriba, imagen grande abajo) -->
+  <div class="seccion-panoramica">
+    <div class="texto">
       <h2>2. Cartografía del Acervo (Geolocalización)</h2>
-      <p>Esta visualización ancla los testimonios, fotografías y documentos directamente en el territorio donde cobran sentido. Permite a la comunidad y a los evaluadores navegar espacialmente por los recursos multimedia procesados por visión computacional, vinculando la memoria con coordenadas geográficas específicas.</p>
-      <p>Al situar el acervo etnográfico sobre el paisaje histórico, la plataforma restituye la gobernanza comunitaria sobre el patrimonio material e inmaterial.</p>
+      <p>Esta visualización rompe con la estática de los archivos institucionales tradicionales al anclar los testimonios, fotografías y documentos directamente en el territorio donde cobran sentido. Permite a la comunidad y a los investigadores navegar espacialmente por los recursos multimedia procesados por visión computacional, vinculando la memoria con coordenadas geográficas específicas.</p>
+      <p>Al situar el acervo etnográfico sobre el paisaje histórico, la plataforma restituye la gobernanza comunitaria sobre el patrimonio material e inmaterial. La geolocalización funciona aquí como un dispositivo político que valida las ontologías locales frente a las clasificaciones ajenas de los repositorios estatales.</p>
     </div>
-    <div class="seccion-imagen">
+    <div class="imagen">
       <img src="cartografia.png" alt="Cartografía del Acervo">
     </div>
   </div>
 
-  <!-- 3. Fotografías e IA -->
-  <div class="seccion-visor">
-    <div class="seccion-texto">
+  <!-- 3. Nodos Relacionales e IA (Texto arriba, imagen grande abajo) -->
+  <div class="seccion-panoramica">
+    <div class="texto">
       <h2>3. Nodos Relacionales e IA (Visor de Fotografía)</h2>
-      <p>Muestra el procesamiento multimodal en segundo plano donde motores de IA (Computer Vision, Whisper para STT y HTR) extraen transcripciones y etiquetas visuales automáticamente, eliminando la ingesta manual de metadatos.</p>
-      <p>Los datos biométricos sensibles de voz y rostro son procesados en servidores privados aislados bajo una política de <em>No-Leakage</em>, evitando que el patrimonio sea transferido a APIs comerciales externas.</p>
+      <p>Esta pantalla evidencia la potencia del procesamiento multimodal en segundo plano, donde motores de Inteligencia Artificial de código abierto (Computer Vision, Whisper para STT y HTR) extraen transcripciones y etiquetas visuales automáticamente. Esto elimina la necesidad de ingesta manual de metadatos, superando las limitaciones de plataformas convencionales como Omeka o Mukurtu.</p>
+      <p>El valor crítico de esta arquitectura radica en la soberanía tecnológica: los datos biométricos sensibles de voz y rostro son procesados en servidores privados aislados bajo una política de <em>No-Leakage</em>. Esto garantiza que el patrimonio de Pilateno no sea transferido ni explotado por APIs comerciales para el entrenamiento de modelos de terceros.</p>
     </div>
-    <div class="seccion-imagen">
+    <div class="imagen">
       <img src="fotografias.png" alt="Visor Inteligencia Artificial">
     </div>
   </div>
 
-  <!-- 4. Mapa DEM -->
-  <div class="seccion-visor">
-    <div class="seccion-texto">
+  <!-- 4. Cartografía Participativa DEM (Texto arriba, imagen grande abajo) -->
+  <div class="seccion-panoramica">
+    <div class="texto">
       <h2>4. Cartografía Participativa sobre Modelo DEM</h2>
-      <p>La proyección de capas hidrográficas, productivas y patrimoniales sobre Modelos Digitales de Elevación (DEM) traduce la geografía sagrada y las territorialidades en una herramienta visual de autogestión.</p>
-      <p>Integrar pilas de agua, cafetales y zonas ejidales permite leer históricamente las dinámicas socioambientales de Xilitla en un formato interactivo.</p>
+      <p>La proyección de capas hidrográficas, productivas y patrimoniales sobre Modelos Digitales de Elevación (DEM) traduce la geografía sagrada y los conflictos territoriales en una herramienta visual de autogestión. Integrar elementos como pilas de agua, cafetales y zonas ejidales permite leer históricamente las tensiones socioambientales de Xilitla en un formato interactivo.</p>
+      <p>Esta visualización consolida el concepto del <em>anarchivo</em> como un espacio vivo. En lugar de un mapa estático dictado por el Estado, la comunidad cuenta con una topografía maleable donde los habitantes delimitan y defienden activamente las materialidades que conforman su identidad.</p>
     </div>
-    <div class="seccion-imagen">
+    <div class="imagen">
       <img src="mapa.png" alt="Mapa Participativo DEM">
     </div>
   </div>
 
-  <!-- 5. Redes Semánticas -->
-  <div class="seccion-visor">
-    <div class="seccion-texto">
+  <!-- 5. Redes Semánticas Emergentes (Texto arriba, imagen grande abajo) -->
+  <div class="seccion-panoramica">
+    <div class="texto">
       <h2>5. Redes Semánticas Emergentes (Grafo Dinámico)</h2>
-      <p>El grafo interactivo ilustra las conexiones orgánicas entre entidades patrimoniales fundamentales (Agua, Tierra, Café), los cronotopos generacionales (como los <em>güelos</em>) y las autoridades comunitarias.</p>
-      <p>Esta red flexible evidencia cómo la plataforma no impone categorías rígidas, sino que parte de nodos base que se reordenan según la ingesta de la población.</p>
+      <p>El grafo interactivo ilustra las conexiones orgánicas entre entidades patrimoniales fundamentales (Agua, Tierra, Café), los cronotopos generacionales (como los <em>güelos</em>) y las autoridades comunitarias. Esta red flexible evidencia cómo la plataforma no impone categorías rígidas, sino que parte de nodos base que se reordenan según la ingesta de la población.</p>
+      <p>Representa la culminación metodológica del proyecto: una infraestructura descentralizada que cede la autoridad científica a los pobladores. El grafo visibiliza la complejidad de las relaciones sociales y territoriales en Pilateno, permitiendo a los evaluadores comprender la escalabilidad y profundidad analítica de la propuesta.</p>
     </div>
-    <div class="seccion-imagen">
+    <div class="imagen">
       <img src="semanticas.png" alt="Grafo Dinámico de Redes Semánticas">
     </div>
   </div>
